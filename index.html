@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dott.ssa Maria Rossi - Osteopata Pediatrica</title>
+    <style>
+        :root {
+            --primary-color: #4aa1f3;
+            --secondary-color: #e8491d;
+            --background-color: #f0f8ff;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery img {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .contact {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1rem;
+            margin-top: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact h2 {
+            margin-top: 0;
+        }
+
+        .contact a {
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        #animated-element {
+            width: 80px;
+            height: 80px;
+            background-color: var(--secondary-color);
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            font-weight: bold;
+            cursor: pointer;
+            animation: bounce 2s infinite;
+            z-index: 1000;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        #booking-modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        #calendar {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .calendar-day {
+            border: 1px solid #ddd;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .calendar-day:hover {
+            background-color: #f0f0f0;
+        }
+
+        .calendar-day.selected {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        #time-slots {
+            margin-top: 20px;
+        }
+
+        .time-slot {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: var(--primary-color);
+            color: var(--white);
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .time-slot.occupied {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #month-selector {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        #month-selector button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 5px 10px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5rem;
+            }
+
+            .gallery img {
+                max-width: 100%;
+            }
+
+            #animated-element {
+                width: 60px;
+                height: 60px;
+                font-size: 0.8rem;
+            }
+
+            .modal-content {
+                margin: 20% auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dott.ssa Maria Rossi</h1>
+        <p>Osteopata Pediatrica</p>
+    </header>
+
+    <div class="container">
+        <h2>Benvenuti nel mondo dell'osteopatia pediatrica!</h2>
+        <p>La Dott.ssa Maria Rossi è specializzata nel trattamento osteopatico dei bambini, dalla nascita all'adolescenza. Con un approccio dolce e giocoso, aiuta i piccoli pazienti a crescere in salute e armonia.</p>
+
+        <div class="gallery">
+    	    <img src="immagini/download.jpg" alt="Descrizione della foto">
+    	    <img src="immagini/images.jpg" alt="Descrizione della foto">
+    	    <img src="immagini/osteopatia-neonatale.jpg" alt="Descrizione della foto">
+
+        </div>
+
+        <div class="contact">
+            <h2>Contattaci</h2>
+            <p>Email: <a href="mailto:maria.rossi@esempio.com">maria.rossi@esempio.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mariarossi" target="_blank">linkedin.com/in/mariarossi</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/mariarossi_osteopata" target="_blank">@mariarossi_osteopata</a></p>
+            <p>Telefono: <a href="tel:+391234567890">+39 123 456 7890</a></p>
+        </div>
+    </div>
+
+    <div id="animated-element" onclick="openModal()">
+        Prenota!
+    </div>
+
+    <div id="booking-modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Prenota una visita</h2>
+            <div id="month-selector">
+                <button onclick="changeMonth(-1)">&lt;</button>
+                <span id="current-month"></span>
+                <button onclick="changeMonth(1)">&gt;</button>
+            </div>
+            <div id="calendar"></div>
+            <div id="time-slots"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentDate = new Date();
+        let selectedDate = null;
+
+        function openModal() {
+            document.getElementById('booking-modal').style.display = 'block';
+            generateCalendar();
+        }
+
+        function closeModal() {
+            document.getElementById('booking-modal').style.display = 'none';
+        }
+
+        function changeMonth(delta) {
+            currentDate.setMonth(currentDate.getMonth() + delta);
+            generateCalendar();
+        }
+
+        function generateCalendar() {
+            const calendar = document.getElementById('calendar');
+            calendar.innerHTML = '';
+
+            const year = currentDate.getFullYear();
+            const month = currentDate.getMonth();
+
+            document.getElementById('current-month').textContent = 
+                currentDate.toLocaleString('it-IT', { month: 'long', year: 'numeric' });
+
+            const firstDay = new Date(year, month, 1);
+            const lastDay = new Date(year, month + 1, 0);
+
+            for (let i = 0; i < firstDay.getDay(); i++) {
+                calendar.appendChild(document.createElement('div'));
+            }
+
+            for (let day = 1; day <= lastDay.getDate(); day++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = day;
+                dayElement.onclick = () => selectDate(new Date(year, month, day));
+                calendar.appendChild(dayElement);
+            }
+        }
+
+        function selectDate(date) {
+            selectedDate = date;
+            document.querySelectorAll('.calendar-day').forEach(el => el.classList.remove('selected'));
+            event.target.classList.add('selected');
+            generateTimeSlots();
+        }
+
+        function generateTimeSlots() {
+            const timeSlotsContainer = document.getElementById('time-slots');
+            timeSlotsContainer.innerHTML = '<h3>Orari disponibili:</h3>';
+
+            const startHour = 8;
+            const endHour = 18;
+
+            for (let hour = startHour; hour < endHour; hour++) {
+                if (hour !== 13) {  // Escludi la pausa pranzo
+                    const timeSlot = document.createElement('div');
+                    timeSlot.className = 'time-slot';
+                    timeSlot.textContent = `${hour}:00`;
+
+                    // Simula slot occupati in modo casuale
+                    if (Math.random() < 0.3) {
+                        timeSlot.classList.add('occupied');
+                    } else {
+                        timeSlot.onclick = () => bookAppointment(hour);
+                    }
+
+                    timeSlotsContainer.appendChild(timeSlot);
+                }
+            }
+        }
+
+        function bookAppointment(hour) {
+            const formattedDate = selectedDate.toLocaleDateString('it-IT');
+            const formattedTime = `${hour}:00`;
+            
+            // Simula l'invio di una email all'osteopata
+            console.log(`Email inviata all'osteopata: Nuova prenotazione per il ${formattedDate} alle ${formattedTime}`);
+            
+            alert(`Prenotazione confermata per il ${formattedDate} alle ${formattedTime}. Un'email di conferma è stata inviata all'osteopata.`);
+            closeModal();
+        }
+
+        // Inizializza il calendario quando la pagina è caricata
+        window.onload = generateCalendar;
+    </script>
+</body>
+</html>
