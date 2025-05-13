@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -43,19 +42,19 @@
   </section>
 
   <!-- WORKS -->
-  <section id="works" class="works">
+  <section id="works" class="works reveal">
     <div class="container">
       <h2 class="section-title">Works</h2>
       <div class="cards-wrapper">
-        <a href="custom-bots.html" class="feature-card">
+        <a href="custom-bots.html" class="feature-card reveal">
           <h3>Custom Bots</h3>
           <p>Crea bot su misura per il tuo business.</p>
         </a>
-        <a href="smart-agents.html" class="feature-card">
+        <a href="smart-agents.html" class="feature-card reveal">
           <h3>Smart Agents</h3>
           <p>Agent intelligenti per flussi di lavoro automatizzati.</p>
         </a>
-        <a href="analytics.html" class="feature-card">
+        <a href="analytics.html" class="feature-card reveal">
           <h3>Analytics</h3>
           <p>Dashboard e report per monitorare le performance.</p>
         </a>
@@ -64,20 +63,20 @@
   </section>
 
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="testimonials">
+  <section id="testimonials" class="testimonials reveal">
     <div class="container">
       <h2 class="section-title">Testimonials</h2>
       <div class="testimonials-wrapper">
-        <div class="test-card">
-          <img src="IMG/Reviews1.jpg" alt="Utente 1">
+        <div class="test-card reveal">
+          <img src="IMG/Reviews1.jpg" alt="Utente 1" loading="lazy">
           <p>Ottimo servizio, consigliatissimo!</p>
         </div>
-        <div class="test-card">
-          <img src="IMG/Reviews2.jpg" alt="Utente 2">
+        <div class="test-card reveal">
+          <img src="IMG/Reviews2.jpg" alt="Utente 2" loading="lazy">
           <p>Bot super efficienti e facili da integrare.</p>
         </div>
-        <div class="test-card">
-          <img src="IMG/Reviews3.jpg" alt="Utente 3">
+        <div class="test-card reveal">
+          <img src="IMG/Reviews3.jpg" alt="Utente 3" loading="lazy">
           <p>Il team ha risposto a tutte le mie esigenze.</p>
         </div>
       </div>
@@ -91,11 +90,35 @@
     </div>
   </footer>
 
+  <!-- JS -->
   <script>
-    // toggle menu
-    document.querySelector('.nav-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('show');
+    // Menu toggle + chiusura automatica
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('show');
     });
+
+    document.addEventListener('click', e => {
+      if (!menu.contains(e.target) && !toggle.contains(e.target)) {
+        menu.classList.remove('show');
+      }
+    });
+
+    // Scroll reveal effetto semplice
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < windowHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
   </script>
 </body>
 </html>
