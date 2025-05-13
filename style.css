@@ -23,10 +23,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem; /* ✅ Avvicina logo e menu ai lati */
+  padding: 1rem 5vw; /* spazio proporzionale ai lati */
   width: 100%;
   max-width: none;
 }
+
 .brand {
   display:flex;
   align-items:center;
