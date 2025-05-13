@@ -178,3 +178,14 @@ footer p { color:#0a0303; font-size:.8rem }
   .nav-links a { padding:.5rem .75rem; font-size:.9rem }
   .works, .testimonials { padding:2rem 0 }
 }
+
+/* Scroll reveal effetto */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
