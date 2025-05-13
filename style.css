@@ -22,9 +22,9 @@ nav {
   padding: 0; 
 }
 nav .container {
-  max-width: none;    /* rimuove limite centrale */
   width: 100%;
-  padding: 1rem 2rem; /* margine laterale più stretto */
+  max-width: none;
+  padding: 1rem 4vw; /* meno spazio ai lati */
 }
 .brand {
   display:flex;
