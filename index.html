@@ -1,90 +1,123 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GptBot.hub</title>
-  <meta name="description" content="Crea bot su misura per il tuo business con GptBot.hub: Custom Bots, Smart Agents e Analytics.">
-  <!-- Open Graph -->
-  <meta property="og:title" content="GptBot.hub">
-  <meta property="og:description" content="Bot personalizzati, Smart Agents e Analytics per il tuo business.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://fedefossat.github.io/GptBotHub/">
-  <meta property="og:image" content="IMG/hero.png">
-  <!-- Foglio di stile -->
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Crea bot su misura per il tuo business: Custom Bots, Smart Agents, Analytics."/>
+  <link rel="icon" href="IMG/LogoWhite.png" type="image/png"/>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Tiny5&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="header">
+
+  <header>
     <nav class="nav container">
-      <a href="#" class="nav__logo">GptBot.hub</a>
-      <button class="nav__toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Apri menu">
-        <span class="nav__icon">&#9776;</span>
+      <a href="#home" class="brand">
+        <img src="IMG/LogoWhite.png" alt="Logo GptBot.hub" class="nav-logo" loading="lazy"/>
+        GptBot.hub
+      </a>
+      <button type="button" class="nav-toggle" aria-label="Apri menu" aria-expanded="false">
+        ☰
       </button>
-      <ul id="nav-menu" class="nav__list">
-        <li><a href="#works" class="nav__link">Works</a></li>
-        <li><a href="#testimonials" class="nav__link">Testimonials</a></li>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="works" class="works container">
-      <h2 class="section__title">Works</h2>
-      <div class="works__grid">
-        <article class="card">
-          <h3 class="card__title">Custom Bots</h3>
-          <p class="card__description">Crea bot su misura per il tuo business.</p>
-        </article>
-        <article class="card">
-          <h3 class="card__title">Smart Agents</h3>
-          <p class="card__description">Agent intelligenti per flussi di lavoro automatizzati.</p>
-        </article>
-        <article class="card">
-          <h3 class="card__title">Analytics</h3>
-          <p class="card__description">Dashboard e report per monitorare le performance.</p>
-        </article>
+  <main id="home">
+    <section class="hero">
+      <div class="container">
+        <h1>GptBot.hub</h1>
+        <img src="IMG/LogoWhite.png" alt="Logo GptBot" class="hero-logo" loading="lazy"/>
       </div>
     </section>
 
-    <section id="testimonials" class="testimonials container">
-      <h2 class="section__title">Testimonials</h2>
-      <ul class="testimonials__list">
-        <li class="testimonial">
-          <figure>
-            <img src="IMG/user1.jpg" alt="Ritratto di utente 1" class="testimonial__image" loading="lazy">
-            <figcaption class="testimonial__caption">"GptBot.hub ha trasformato il nostro servizio clienti!"</figcaption>
-          </figure>
-        </li>
-        <li class="testimonial">
-          <figure>
-            <img src="IMG/user2.jpg" alt="Ritratto di utente 2" class="testimonial__image" loading="lazy">
-            <figcaption class="testimonial__caption">"Gli smart agents ci hanno fatto risparmiare ore di lavoro."</figcaption>
-          </figure>
-        </li>
-        <li class="testimonial">
-          <figure>
-            <img src="IMG/user3.jpg" alt="Ritratto di utente 3" class="testimonial__image" loading="lazy">
-            <figcaption class="testimonial__caption">"Le analytics sono chiare e immediate."</figcaption>
-          </figure>
-        </li>
-      </ul>
+    <section id="works" class="works reveal">
+      <div class="container">
+        <h2 class="section-title">Works</h2>
+        <div class="cards-wrapper">
+          <a href="custom-bots.html" class="feature-card reveal">
+            <h3>Custom Bots</h3>
+            <p>Crea bot su misura per il tuo business.</p>
+          </a>
+          <a href="smart-agents.html" class="feature-card reveal">
+            <h3>Smart Agents</h3>
+            <p>Agent intelligenti per flussi di lavoro automatizzati.</p>
+          </a>
+          <a href="analytics.html" class="feature-card reveal">
+            <h3>Analytics</h3>
+            <p>Dashboard e report per monitorare le performance.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials reveal">
+      <div class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <div class="testimonials-wrapper">
+          <div class="test-card reveal">
+            <img src="IMG/Reviews1.jpg" alt="Cliente soddisfatto 1" loading="lazy"/>
+            <p>Ottimo servizio, consigliatissimo!</p>
+          </div>
+          <div class="test-card reveal">
+            <img src="IMG/Reviews2.jpg" alt="Cliente soddisfatto 2" loading="lazy"/>
+            <p>Bot super efficienti e facili da integrare.</p>
+          </div>
+          <div class="test-card reveal">
+            <img src="IMG/Reviews3.jpg" alt="Cliente soddisfatto 3" loading="lazy"/>
+            <p>Il team ha risposto a tutte le mie esigenze.</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <p>© 2025 GptBot.hub. Tutti i diritti riservati.</p>
+  <footer>
+    <div class="container">
+      <p>© 2025 GptBot.hub. Tutti i diritti riservati.</p>
+    </div>
   </footer>
 
   <script>
-    // Toggle navigation menu
-    document.querySelector('.nav__toggle').addEventListener('click', function(){
-      const menu = document.getElementById('nav-menu');
-      const expanded = this.getAttribute('aria-expanded') === 'true';
-      this.setAttribute('aria-expanded', String(!expanded));
-      menu.classList.toggle('nav__list--visible');
+    // NAV toggle
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav-links');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('show');
     });
+
+    // chiude se clic fuori
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target) && !btn.contains(e.target)) {
+        nav.classList.remove('show');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    function scrollReveal() {
+      const h = window.innerHeight;
+      reveals.forEach(el => {
+        if (el.getBoundingClientRect().top < h - 50) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', scrollReveal);
+    window.addEventListener('load', scrollReveal);
   </script>
 </body>
 </html>
