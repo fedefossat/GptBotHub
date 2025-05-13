@@ -18,13 +18,13 @@ body {
 
 /* NAVBAR */
 nav {
-  background:#88898f; position:relative; z-index:1000;
+  background: #88898f;
+  padding: 0; 
 }
-.nav-container {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:1rem;
+nav .container {
+  max-width: none;    /* rimuove limite centrale */
+  width: 100%;
+  padding: 1rem 2rem; /* margine laterale più stretto */
 }
 .brand {
   display:flex;
