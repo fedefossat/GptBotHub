@@ -1,3 +1,5 @@
+/* style.css */
+
 /* RESET & BASE */
 * { margin:0; padding:0; box-sizing:border-box }
 html { scroll-behavior:smooth }
@@ -17,17 +19,13 @@ body {
 /* NAVBAR */
 nav {
   background: #88898f;
-  padding: 0;
+  padding: 0; 
 }
-
-.nav-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+nav .container {
   width: 100%;
-  padding: 1rem 2rem; /* ✅ Avvicina logo e menu ai lati */
+  max-width: none;
+  padding: 1rem 4vw; /* meno spazio ai lati */
 }
-
 .brand {
   display:flex;
   align-items:center;
@@ -36,12 +34,10 @@ nav {
   font-weight:bold;
   font-size:1.5rem;
 }
-
 .nav-logo {
   width:35px; margin-right:0.5rem;
   filter:brightness(0) saturate(100%) !important;
 }
-
 .nav-toggle {
   display:block;
   font-size:1.5rem;
@@ -50,8 +46,7 @@ nav {
   color:#111;
   cursor:pointer;
 }
-
-/* NAV LINKS */
+/* rimuove i bullet */
 .nav-links {
   list-style:none;
   position:absolute;
