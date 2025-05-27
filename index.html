@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GptBot.hub</title>
   <link rel="icon" type="image/png" href="IMG/LogoWhite.png">
 
   <!-- Google Fonts -->
@@ -21,13 +22,13 @@
         <img src="IMG/LogoWhite.png" alt="Logo" class="nav-logo">
         GptBot.hub
       </a>
-
-      <button class="nav-toggle" aria-label="Apri menu">☰</button>
-
+      <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#works">Works</a></li>
-        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#services">Cosa Facciamo</a></li> 
+        <li><a href="#contacts">Contatti</a></li>
       </ul>
     </div>
   </nav>
@@ -40,20 +41,38 @@
     </div>
   </section>
 
+  <!-- ABOUT / INTRO -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">Cos'è GptBot.hub?</h2>
+      <p class="about-text">
+        GptBot.hub è uno spazio dedicato a progetti basati sull’intelligenza artificiale, con focus particolare su: <br>
+        Bot GPT,<br>
+        Automazioni Intelligenti,<br>
+        Soluzioni Personalizzate.<br>
+      </p>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/tuo_username" target="_blank">
+          <img src="IMG/InstaIcona.png" alt="Instagram" />
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- WORKS -->
   <section id="works" class="works">
     <div class="container">
       <h2 class="section-title">Works</h2>
       <div class="cards-wrapper">
-        <a href="#" class="feature-card bg-crypto">
-          <h3>Crypto Project</h3>
-          <p>Soluzioni avanzate su blockchain e smart contract.</p>
-        </a>
-        <a href="#" class="feature-card bg-btc">
+        <a href="btc-analisi.html" class="feature-card bg-btc">
           <h3>BTC Analisi</h3>
           <p>Analisi tecnica e fondamentale su Bitcoin.</p>
         </a>
-        <a href="#" class="feature-card bg-prompt">
+        <a href="crypto-project.html" class="feature-card bg-crypto">
+          <h3>Crypto Project</h3>
+          <p>Soluzioni avanzate su blockchain e smart contract.</p>
+        </a>
+        <a href="prompt-master.html" class="feature-card bg-prompt">
           <h3>Prompt Master</h3>
           <p>Strumento avanzato per la generazione di prompt IA.</p>
         </a>
@@ -61,8 +80,22 @@
     </div>
   </section>
 
+  <!-- COSA FACCIAMO -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2 class="section-title">Cosa Facciamo</h2>
+      <p class="services-text">
+        Progettiamo soluzioni basate su intelligenza artificiale,<br>
+        con particolare attenzione al mondo crypto, alla finanza e all’automazione di flussi di lavoro.<br>
+        Sviluppiamo bot GPT personalizzati,<br>
+        e strumenti digitali pensati per essere subito operativi e facilmente integrabili.<br>
+        Il nostro obiettivo è trasformare le esigenze in soluzioni concrete, rapide e su misura.
+      </p>
+    </div>
+  </section>
+
   <!-- TESTIMONIALS -->
-  <section id="testimonials" class="testimonials">
+  <section id="testimonials" class="testimonials" style="display: none;">
     <div class="container">
       <h2 class="section-title">Testimonials</h2>
       <div class="testimonials-wrapper">
@@ -82,6 +115,15 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
+  <section id="contacts" class="contacts">
+    <div class="container">
+      <h2 class="section-title">Contatti</h2>
+      <p>Puoi scrivermi per richieste, collaborazioni o info a:</p>
+      <p><a href="mailto:tuo@email.it">tuo@email.it</a></p>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="container">
@@ -89,11 +131,34 @@
     </div>
   </footer>
 
+  <!-- MENU MOBILE + CHIUSURA ESTERNA -->
   <script>
-    // toggle menu
-    document.querySelector('.nav-toggle').addEventListener('click', () => {
-      document.querySelector('.nav-links').classList.toggle('show');
+    const toggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    // Toggle del menu mobile
+    toggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      toggle.setAttribute('aria-expanded', navLinks.classList.contains('show'));
+    });
+
+    // Chiudi menu se clicchi fuori
+    document.addEventListener('click', (e) => {
+      const clickedInside = navLinks.contains(e.target) || toggle.contains(e.target);
+      if (!clickedInside && navLinks.classList.contains('show')) {
+        navLinks.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Chiudi menu quando clicchi un link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
     });
   </script>
+
 </body>
 </html>
