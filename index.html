@@ -2,24 +2,28 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GptBot.hub</title>
   <link rel="icon" type="image/png" href="IMG/LogoWhite.png">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Font WDXL Lubrifont TC -->
+<link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+TC&display=swap" rel="stylesheet">
+
+<!-- Font Rubik -->
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="gptbot_hub_script.js" defer></script>
 </head>
 <body>
 
-  <!-- NAVBAR -->
   <nav>
     <div class="container nav-container">
       <a href="#home" class="brand">
-        <img src="IMG/LogoWhite.png" alt="Logo" class="nav-logo">
+        <img src="IMG/LogoWhite.png" alt="Logo" class="nav-logo" loading="lazy">
         GptBot.hub
       </a>
       <button class="nav-toggle" aria-label="Apri menu" aria-expanded="false">☰</button>
@@ -33,46 +37,43 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
+  <section id="home" class="hero" data-aos="fade-up">
     <div class="container">
       <h1 class="glitch-title">GptBot.hub</h1>
-      <img src="IMG/LogoWhite.png" alt="Logo GptBot" class="hero-logo">
+      <img src="IMG/LogoWhite.png" alt="Logo GptBot" class="hero-logo" loading="lazy">
     </div>
   </section>
 
-  <!-- ABOUT / INTRO -->
-  <section id="about" class="about">
+  <section id="about" class="about" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Cos'è GptBot.hub?</h2>
       <p class="about-text">
-        GptBot.hub è uno spazio dedicato a progetti basati sull’intelligenza artificiale, con focus particolare su: <br>
+        GptBot.hub è uno spazio dedicato a progetti basati sull’intelligenza artificiale, con focus particolare su:<br>
         Bot GPT,<br>
         Automazioni Intelligenti,<br>
         Soluzioni Personalizzate.<br>
       </p>
       <div class="social-icons">
         <a href="https://www.instagram.com/tuo_username" target="_blank">
-          <img src="IMG/InstaIcona.png" alt="Instagram" />
+          <img src="IMG/InstaIcona.png" alt="Instagram" loading="lazy" />
         </a>
       </div>
     </div>
   </section>
 
-  <!-- WORKS -->
-  <section id="works" class="works">
+  <section id="works" class="works" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Works</h2>
       <div class="cards-wrapper">
-        <a href="btc-analisi.html" class="feature-card bg-btc">
+        <a href="btc-analisi.html" class="feature-card bg-btc" data-aos="zoom-in">
           <h3>BTC Analisi</h3>
           <p>Analisi tecnica e fondamentale su Bitcoin.</p>
         </a>
-        <a href="crypto-project.html" class="feature-card bg-crypto">
+        <a href="crypto-project.html" class="feature-card bg-crypto" data-aos="zoom-out" data-aos-delay="100">
           <h3>Crypto Project</h3>
           <p>Soluzioni avanzate su blockchain e smart contract.</p>
         </a>
-        <a href="prompt-master.html" class="feature-card bg-prompt">
+        <a href="prompt-master.html" class="feature-card bg-prompt" data-aos="zoom-in" data-aos-delay="200">
           <h3>Prompt Master</h3>
           <p>Strumento avanzato per la generazione di prompt IA.</p>
         </a>
@@ -80,8 +81,7 @@
     </div>
   </section>
 
-  <!-- COSA FACCIAMO -->
-  <section id="services" class="services">
+  <section id="services" class="services" data-aos="fade-up">
     <div class="container">
       <h2 class="section-title">Cosa Facciamo</h2>
       <p class="services-text">
@@ -94,29 +94,7 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section id="testimonials" class="testimonials" style="display: none;">
-    <div class="container">
-      <h2 class="section-title">Testimonials</h2>
-      <div class="testimonials-wrapper">
-        <div class="test-card">
-          <img src="IMG/Reviews1.jpg" alt="Utente 1">
-          <p>Ottimo servizio, consigliatissimo!</p>
-        </div>
-        <div class="test-card">
-          <img src="IMG/Reviews2.jpg" alt="Utente 2">
-          <p>Bot super efficienti e facili da integrare.</p>
-        </div>
-        <div class="test-card">
-          <img src="IMG/Reviews3.jpg" alt="Utente 3">
-          <p>Il team ha risposto a tutte le mie esigenze.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contacts" class="contacts">
+  <section id="contacts" class="contacts" data-aos="fade-up" data-aos-offset="100">
     <div class="container">
       <h2 class="section-title">Contatti</h2>
       <p>Puoi scrivermi per richieste, collaborazioni o info a:</p>
@@ -124,41 +102,17 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="container">
       <p>© 2025 GptBot.hub. Tutti i diritti riservati.</p>
     </div>
   </footer>
 
-  <!-- MENU MOBILE + CHIUSURA ESTERNA -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const navLinks = document.querySelector('.nav-links');
-
-    // Toggle del menu mobile
-    toggle.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-      toggle.setAttribute('aria-expanded', navLinks.classList.contains('show'));
-    });
-
-    // Chiudi menu se clicchi fuori
-    document.addEventListener('click', (e) => {
-      const clickedInside = navLinks.contains(e.target) || toggle.contains(e.target);
-      if (!clickedInside && navLinks.classList.contains('show')) {
-        navLinks.classList.remove('show');
-        toggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    // Chiudi menu quando clicchi un link
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('show');
-        toggle.setAttribute('aria-expanded', 'false');
-      });
+    AOS.init({
+      duration: 1200,
     });
   </script>
-
 </body>
 </html>
