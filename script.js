@@ -1,6 +1,12 @@
-AOS.init({
-  duration: 900,
-  offset: 200, // 👈 distanza dal bottom (in pixel)
+document.addEventListener('DOMContentLoaded', function() {
+  AOS.init({
+    once: false, // per permettere più fade-in
+    mirror: false, // NON rifare l'animazione in uscita
+    duration: 800, // o il tempo che preferisci
+    easing: 'ease-in-out',
+    anchorPlacement: 'top-bottom', // trigger preciso
+    offset: 200,
+  });
 });
 
 // Menù hamburger
